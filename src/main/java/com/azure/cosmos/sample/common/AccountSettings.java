@@ -26,15 +26,7 @@ public class AccountSettings {
     // Replace MASTER_KEY and HOST with values from your Azure Cosmos DB account.
     // The default values are credentials of the local emulator, which are not used in any production environment.
     // <!--[SuppressMessage("Microsoft.Security", "CS002:SecretInNextLine")]-->
-    public static String MASTER_KEY =
-            System.getProperty("ACCOUNT_KEY", 
-                    StringUtils.defaultString(StringUtils.trimToNull(
-                            System.getenv().get("ACCOUNT_KEY")),
-                            ""));
+    public static String MASTER_KEY ="";
 
-    public static String HOST =
-            System.getProperty("ACCOUNT_HOST",
-                    StringUtils.defaultString(StringUtils.trimToNull(
-                            System.getenv().get("ACCOUNT_HOST")),
-                            "https://tanyalearning.documents.azure.com:443/"));
+    public static String HOST = "";
 }

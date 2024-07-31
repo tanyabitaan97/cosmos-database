@@ -155,7 +155,8 @@ public class SyncMain {
             //  Create item using container that we created using sync client
 
             //  Using appropriate partition key improves the performance of database operations
-            CosmosItemResponse item = container.createItem(family, new PartitionKey(family.getPartitionKey()), new CosmosItemRequestOptions());
+            CosmosItemResponse item = container.createItem(family, new PartitionKey(family.
+            		getPartitionKey()), new CosmosItemRequestOptions());
 
             //  Get request charge and other properties like latency, and diagnostics strings, etc.
             System.out.println(String.format("Created item with request charge of %.2f within" +
