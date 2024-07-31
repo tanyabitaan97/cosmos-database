@@ -20,7 +20,6 @@ import com.azure.cosmos.models.CosmosContainerResponse;
 import com.azure.cosmos.models.CosmosDatabaseResponse;
 import com.azure.cosmos.models.ThroughputProperties;
 import com.azure.cosmos.util.CosmosPagedIterable;
-import com.azure.cosmos.sample.common.AccountSettings;
 import com.azure.cosmos.sample.common.Families;
 import com.azure.cosmos.sample.common.Family;
 
@@ -69,15 +68,15 @@ public class SyncMain {
     //  </Main>
 
     private void getStartedDemo() throws Exception {
-        System.out.println("Using Azure Cosmos DB endpoint: " + AccountSettings.HOST);
+    
 
         ArrayList<String> preferredRegions = new ArrayList<String>();
         preferredRegions.add("West US");
 
         //  Create sync client
         client = new CosmosClientBuilder()
-            .endpoint(AccountSettings.HOST)
-            .key(AccountSettings.MASTER_KEY)
+            .endpoint("")
+            .key("")
             .preferredRegions(preferredRegions)
             .userAgentSuffix("CosmosDBJavaQuickstart")
             .consistencyLevel(ConsistencyLevel.EVENTUAL)
